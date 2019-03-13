@@ -48,7 +48,7 @@ index 4ff03488..79a3a145 100644
      public String getName()
      {
 -        return "Waterfall";
-+        return "Travertine";
++        return "SimpleBungee";
      }
  
      @Override
@@ -83,7 +83,7 @@ index b26035cf..4e2c6129 100644
      public void execute(CommandSender sender, String[] args)
      {
 -        sender.sendMessage( ChatColor.BLUE + "This server is running Waterfall version " + ProxyServer.getInstance().getVersion() + " by md_5" );
-+        sender.sendMessage( ChatColor.BLUE + "This server is running Travertine version " + ProxyServer.getInstance().getVersion() + " by md_5" );
++        sender.sendMessage( ChatColor.BLUE + "This server is running SimpleBungee version " + ProxyServer.getInstance().getVersion() + " by SimplyServers and md_5" );
      }
  }
 diff --git a/proxy/src/main/java/net/md_5/bungee/command/CommandReload.java b/proxy/src/main/java/net/md_5/bungee/command/CommandReload.java
@@ -96,8 +96,8 @@ index f5c028dd..c50a05f7 100644
  
 -        sender.sendMessage( ChatColor.BOLD.toString() + ChatColor.RED.toString() + "Waterfall has been reloaded."
 -                + " This is NOT advisable and you will not be supported with any issues that arise! Please restart Waterfall ASAP." );
-+        sender.sendMessage( ChatColor.BOLD.toString() + ChatColor.RED.toString() + "Travertine has been reloaded."
-+                + " This is NOT advisable and you will not be supported with any issues that arise! Please restart Travertine ASAP." );
++        sender.sendMessage( ChatColor.BOLD.toString() + ChatColor.RED.toString() + "SimpleBungee has been reloaded."
++                + " This is NOT advisable and you will not be supported with any issues that arise! Please restart SimpleBungee ASAP." );
      }
  }
 diff --git a/proxy/src/main/java/net/md_5/bungee/conf/YamlConfig.java b/proxy/src/main/java/net/md_5/bungee/conf/YamlConfig.java
@@ -109,7 +109,7 @@ index 44011a96..8cceac2d 100644
              String name = entry.getKey();
              String addr = get( "address", "localhost:25565", val );
 -            String motd = ChatColor.translateAlternateColorCodes( '&', get( "motd", "&1Just another Waterfall - Forced Host", val ) );
-+            String motd = ChatColor.translateAlternateColorCodes( '&', get( "motd", "&1Just another Travertine - Forced Host", val ) );
++            String motd = ChatColor.translateAlternateColorCodes( '&', get( "motd", "&1Just another Simplyervers - Forced Host", val ) );
              boolean restricted = get( "restricted", false, val );
              InetSocketAddress address = Util.getAddr( addr );
              ServerInfo info = ProxyServer.getInstance().constructServerInfo( name, address, motd, restricted );
